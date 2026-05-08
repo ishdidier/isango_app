@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:isango_app/screens/auth/login_screen.dart';
+import 'package:isango_app/screens/auth/register_screen.dart';
 import 'package:isango_app/screens/home/home_screen.dart';
 import 'package:isango_app/screens/saved/saved_screen.dart';
 import 'package:isango_app/screens/settings/settings_screen.dart';
@@ -19,11 +21,11 @@ class IsangoApp extends StatelessWidget {
       initialRoute: AppRoutes.home,
       routes: {
         AppRoutes.home: (context) => const HomeScreen(),
+        AppRoutes.login: (context) => const LoginScreen(),
+        AppRoutes.signUp: (context) => const RegisterScreen(),
         AppRoutes.saved:(context) => const SavedScreen(),
         AppRoutes.submitEvent:(context) => const SubmitScreen(),
         AppRoutes.settings:(context) => const SettingsScreen(),
-
-
       },
 
     );

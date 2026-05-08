@@ -11,12 +11,14 @@ class IsangoPlaceholderScreen extends StatelessWidget {
     required this.message,
     this.currentIndex,
     this.showBottomNavigation = false,
+    this.action,
   });
 
   final String title;
   final String message;
   final int? currentIndex;
   final bool showBottomNavigation;
+  final Widget? action;
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +45,10 @@ class IsangoPlaceholderScreen extends StatelessWidget {
                 Text(title, style: AppTextStyles.headline),
                 const SizedBox(height: AppSpacing.sm),
                 Text(message, style: AppTextStyles.bodyMuted),
+                if (action != null) ...[
+                  const SizedBox(height: AppSpacing.lg),
+                  action!,
+                ],
               ],
             ),
           ),
